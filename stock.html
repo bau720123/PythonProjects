@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>0052.TW 股票資料</title>
+</head>
+<body>
+    <h1>0052.TW 股票資料</h1>
+    <table border="1">
+        <tr>
+            <th>日期</th>
+            <th>開盤</th>
+            <th>最高</th>
+            <th>最低</th>
+            <th>收盤</th>
+        </tr>
+        {% for date, values in data['Close'].items() %}
+        <tr>
+            <td>{{ date }}</td>
+            <td>{{ data['Open'][date] }}</td>
+            <td>{{ data['High'][date] }}</td>
+            <td>{{ data['Low'][date] }}</td>
+            <td>{{ values }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

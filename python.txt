@@ -1,0 +1,684 @@
+查看Python版本：python -V
+檢查預設的pip版本是否與預設的Python版號相同：pip -V
+
+計算字串長度：len(str)
+刪除變數：del(y)
+檢視變數型別：type(a)
+將整數轉為浮點位數：float(a)
+將整數轉為字串：str(a)
+加：+
+減：-
+乘：*
+除：/
+商數：//
+次方：**
+餘數：%
+
+條件進位
+>>> round(1.5)
+2
+>>> round(2)
+2
+>>> round(1.55465, 0)
+2.0
+>>> round(1.55465, 1)
+1.6
+>>> round(1.55465, 2)
+1.55
+>>> round(1.55465, 3)
+1.555
+
+小於等於的最大整數
+>>> import math
+>>> math.floor(1.3542)
+1
+>>> math.floor(-1.3542)
+-2
+
+大於等於的最大整數
+>>> import math
+>>> math.ceil(1.2312)
+2
+>>> math.ceil(-1.2312)
+-1
+
+開根號
+>>> import math
+>>> math.sqrt(100)
+10.0
+
+絕對值
+>>> abs(66)
+66
+>>> abs(-66)
+66
+
+最大值
+>>> max(1,2,3,4,5,6,7,8,9)
+9
+
+最小值
+>>> min(1,2,3,4,5,6,7,8,9)
+1
+
+多字串合併
+>>> gap=',!,'
+>>> a=['1','2','3']
+>>> gap.join(a)
+'1,!,2,!,3'
+
+將特定字串從字首中刪除：lstrip
+將特定字串從字尾中刪除：rstrip
+將特定字串從字首字尾中刪除：strip
+>>> a = 'aaa123456aaa'
+>>> a.lstrip('a')
+'123456aaa'
+>>> a.rstrip('a')
+'aaa123456'
+>>> a.strip('a')
+'123456'
+
+大小寫互換：swapcase
+轉小寫：lower
+轉大寫：upper
+>>> b = 'aaaBBB'
+>>> b.swapcase()
+'AAAbbb'
+>>> b.lower()
+'aaabbb'
+>>> b.upper()
+'AAABBB'
+
+經字串透過0填滿至特定寬度
+>>> t='84500'
+>>> t.zfill(6)
+'084500'
+
+字串中特定字元取代
+>>> a='2011/06/03'
+>>> a.replace('/', '-')
+'2011-06-03'
+
+依照特定符號進行分割
+>>> a='2011/06/03'
+>>> a.split('/')
+['2011', '06', '03']
+
+**tuple**
+
+>>> a=(1,2,3,4)
+>>> a[1:]
+(2, 3, 4)
+>>> a[2:]
+(3, 4)
+>>> a[3:]
+(4,)
+
+>>> a=(1,2,3,4)
+>>> a[:1]
+(1,)
+>>> a[:2]
+(1, 2)
+>>> a[:3]
+(1, 2, 3)
+>>> a[:4]
+(1, 2, 3, 4)
+
+>>> a=(1,2,3,4)
+>>> a[0:1]
+(1,)
+>>> a[1:2]
+(2,)
+>>> a[2:3]
+(3,)
+>>> a[3:4]
+(4,)
+
+這段看不懂
+>>> a=(1,2,3,4)
+>>> a[::1]
+(1, 2, 3, 4)
+>>> a[::2]
+(1, 3)
+>>> a[::3]
+(1, 4)
+>>> a[::4]
+(1,)
+
+>>> a=(1,2,3,4,5)
+>>> b=(2,3,4,5,6)
+>>> a+b
+(1, 2, 3, 4, 5, 2, 3, 4, 5, 6)
+>>> a*2
+(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+
+>>> a=(1,2,3,4,5)
+>>> 1 in a
+True
+>>> 6 in a
+False
+
+>>> a=(1,2,3,4,5)
+>>> for i in a:
+...     print(i)
+...
+1
+2
+3
+4
+5
+
+**list**
+
+>>> a=[1,2,3,4,5]
+>>> a[0]
+1
+>>> a[1]
+2
+>>> a[0]=100
+>>> a
+[100, 2, 3, 4, 5]
+>>> a[1:3]
+[2, 3]
+>>> a[1:4]
+[2, 3, 4]
+>>> a[1:]
+[2, 3, 4, 5]
+>>> a[:4]
+[100, 2, 3, 4]
+>>> a[:3]
+[100, 2, 3]
+>>> a[::2]
+[100, 3, 5] 這行看不懂
+
+>>> a=[1,2,3,4,5]
+>>> b=[3,4,5,6,7]
+>>> a+b
+[1, 2, 3, 4, 5, 3, 4, 5, 6, 7]
+>>> a*3
+[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+>>> a=[1,2,3,4,5]
+>>> a.append(6)
+>>> a
+[1, 2, 3, 4, 5, 6]
+>>> a.extend([7,8])
+>>> a
+[1, 2, 3, 4, 5, 6, 7, 8]
+>>> a.reverse()
+>>> a
+[8, 7, 6, 5, 4, 3, 2, 1]
+>>> a.sort()
+>>> a
+[1, 2, 3, 4, 5, 6, 7, 8]
+>>> a.extend([10,9])
+>>> a
+[1, 2, 3, 5, 5, 6, 7, 8, 10, 9]
+>>> a.sort(reverse=True)
+>>> a
+[10, 9, 8, 7, 6, 5, 5, 3, 2, 1]
+
+>>> a=[1,2,3,4,3,2,3,3,3,3]
+>>> a.count(1)
+1
+>>> a.count(3)
+6
+
+>>> a=[1,2,3,4,3,2,3,3,3,3]
+>>> a.index(3)
+2
+>>> a.index(2)
+1
+>>> a.index(1)
+0
+>>> a.remove(3)
+>>> a
+[1, 2, 4, 2, 3, 3, 3, 3]
+>>> a = [x for x in a if x != 3]
+>>> a
+[1, 2, 4, 2]
+
+>>> a=[1,2,3,4,5]
+>>> 1 in a
+True
+>>> 6 in a
+False
+
+>>> a=[1,2,3,4,5]
+>>> for i in a:
+...     print(i)
+...
+1
+2
+3
+4
+5
+>>> n=0
+>>> for i in a:
+...     n+=i
+...
+>>> n
+15
+
+**dictionary**
+
+>>> a={'apple':20,'banana':40}
+>>> a
+{'apple': 20, 'banana': 40}
+>>> len(a)
+2
+>>> b=a.copy()
+>>> b
+{'apple': 20, 'banana': 40}
+>>> b['apple']=30
+>>> b
+{'apple': 30, 'banana': 40}
+>>> a
+{'apple': 20, 'banana': 40}
+>>> b.clear()
+>>> b
+{}
+>>> a.keys()
+dict_keys(['apple', 'banana'])
+>>> a.values()
+dict_values([20, 40])
+>>> a.items()
+dict_items([('apple', 20), ('banana', 40)])
+>>> for k,v in a.items():
+...     print(k,v)
+...
+apple 20
+banana 40
+
+=====
+
+>>> a=200
+>>> a>210
+False
+>>> a>=100
+True
+
+>>> b=300
+>>> b<200
+False
+>>> b<=400
+True
+
+>>> a=300
+>>> b=250
+>>> a==b
+False
+>>> a!=b
+True
+
+>>> a=100
+>>> b=90
+>>> a==100 and b==100
+False
+>>> a==100 and b==90
+True
+>>> a==100 or b!=100
+True
+
+>>> a=100
+>>> if a > 100:
+...     print('a>100')
+... else:
+...     print('a<=100')
+...
+a<=100
+
+>>> b='下雨'
+>>> if b=='晴天':
+...     print('今天不用帶傘')
+... elif b=='下雨':
+...     print('今天要帶傘')
+... else:
+...     print('天氣不明')
+...
+今天要帶傘
+
+>>> a=1
+>>> b=0
+>>> while a<=10:
+...     print(a)
+...     b+=a
+...     a+=1
+...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+>>> a
+11
+>>> b
+55
+
+>>> a=0
+>>> while a<=10:
+...     a+=1
+...     if a==5 :
+...         break
+...     print(a)
+...
+1
+2
+3
+4
+
+>>> a=[1,2,3,4,5,6]
+>>> for i in a:
+...     if i == 3:
+...         continue
+...     print(i)
+...
+1
+2
+4
+5
+6
+
+>>> a=[1,2,3,4,5,6]
+>>> for i in a:
+...     if i == 3:
+...         pass
+...     print(i)
+...
+1
+2
+3
+4
+5
+6
+
+>>> a=[1,2,3,4,5]
+>>> [i+1 for i in a]
+[2, 3, 4, 5, 6]
+>>> a
+[1, 2, 3, 4, 5]
+>>> [i+1 for i in a if i>=3]
+[4, 5, 6]
+>>> a
+[1, 2, 3, 4, 5]
+>>> b=[[i,i+10] for i in a]
+>>> b
+[[1, 11], [2, 12], [3, 13], [4, 14], [5, 15]]
+>>> [i[1] for i in b]
+[11, 12, 13, 14, 15]
+
+**函數**
+
+>>> def myfun1():
+...     print('Hello')
+...
+>>> myfun1()
+Hello
+>>> def myfun2(x,y):
+...     return x+y
+...
+>>> myfun2(100,45)
+145
+
+>>> class animal():
+...     def __init__(self,name,age,weight):
+...         self.Name=name
+...         self.Age=age
+...         self.Weight=weight
+...     def Eat(self,eat_n):
+...         self.Weight+=eat_n
+...
+>>> jack=animal('pig',30,90)
+>>> jack
+<__main__.animal object at 0x00000202525DC440>
+>>> jack.Age
+30
+>>> jack.Weight
+90
+>>> jack.Eat(20)
+>>> jack.Weight
+110
+
+模組路徑搜索
+>>> import sys
+>>> print(sys.path)
+['', 'C:\\Users\\IDEA3C\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip', 'C:\\Users\\IDEA3C\\AppData\\Local\\Programs\\Python\\Python313\\DLLs', 'C:\\Users\\IDEA3C\\AppData\\Local\\Programs\\Python\\Python313\\Lib', 'C:\\Users\\IDEA3C\\AppData\\Local\\Programs\\Python\\Python313', 'C:\\Users\\IDEA3C\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages']
+
+>>> f=open('a.txt', 'w+')
+>>> f.name
+'a.txt'
+>>> f.closed
+False
+>>> f.mode
+'w+'
+>>> f.close()
+>>> f.closed
+True
+
+>>> with open('123.txt', 'w+') as f:
+...     f.write("123456789\n987654321")
+...
+19
+
+>>> with open('123.txt', 'r') as f:
+...     content = f.read()
+...     print(content)
+...
+123456789
+987654321
+
+>>> with open('123.txt', 'r') as f:
+...     content = [line.strip() for line in f.readlines()]
+...     print(content)
+...
+['123456789', '987654321']
+
+>>> try:
+...     print('1'+1)
+... except Exception as e:
+...     print(f'出錯原因為：{e}')
+...     print(f'錯誤類型：{type(e).__name__}')
+...
+出錯原因為：can only concatenate str (not "int") to str
+錯誤類型：TypeError
+
+>>> import pandas
+Traceback (most recent call last):
+  File "<python-input-48>", line 1, in <module>
+    import pandas
+ModuleNotFoundError: No module named 'pandas'
+>>> quit()
+PS D:\PythonProjects> pip -V
+pip 24.3.1 from C:\Users\IDEA3C\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip (python 3.13)
+PS D:\PythonProjects> pip install pandas
+pip --version
+python.exe -m pip install --upgrade pip
+
+>>> a=datetime.datetime.strptime("13:45:00.430000", "%H:%M:%S.%f")
+>>> b=datetime.datetime.strptime("13:45:00.530000", "%H:%M:%S.%f")
+>>> a
+datetime.datetime(1900, 1, 1, 13, 45, 0, 430000)
+>>> b
+datetime.datetime(1900, 1, 1, 13, 45, 0, 530000)
+>>> a>b
+False
+>>> b>a
+True
+>>> a.strftime('%Y%m%d %H%M%S')
+'19000101 134500'
+>>> a.strftime('%Y/%m/%d %H:%M:%S.%f')
+'1900/01/01 13:45:00.430000'
+
+>>> from datetime import datetime, timedelta
+>>>
+>>> # 任務截止日期
+>>> deadline = datetime(2025, 3, 1, 12, 0, 0)  # 2025年3月1日中午12點
+>>> now = datetime.now()
+>>>
+>>> # 檢查是否過期
+>>> time_left = deadline - now
+>>> if time_left > timedelta(0):
+...     print(f"還有 {time_left.days} 天到期")
+... else:
+...     print("任務已過期！")
+...
+還有 7 天到期
+
+>>> from datetime import datetime, timedelta
+>>>
+>>> deadline = datetime(2025, 3, 1)
+>>> now = datetime.now()
+>>> time_left = deadline - now
+>>>
+>>> if time_left > timedelta(0):
+...     print("還有時間")
+... elif time_left == timedelta(0):
+...     print("正好到期")
+... else:
+...     print("已經過期")
+...
+還有時間
+
+
+# 載入 pandas 套件
+import pandas as pd
+# 定義要轉換為 Dataframe的資料
+data = {'open':[8,10,12], 'close':[10,12,13]}
+# 將 dictionary 轉換為 DataFrame
+df = pd.DataFrame(data)
+# 顯示 DataFrame
+print(df)
+   open  close
+0     8     10
+1    10     12
+2    12     13
+
+# 載入 pandas 套件
+import pandas as pd
+# list 轉成 dataframe
+lst = [['tom','reacher',25], ['krish','pete',30], ['nick','wilson',26], ['juli','williams',22]]
+df = pd.DataFrame(lst, columns = ['FName', 'LName', 'Age'])
+df['Age'] = df['Age'].astype(float)
+>>> df
+   FName     LName   Age
+0    tom   reacher  25.0
+1  krish      pete  30.0
+2   nick    wilson  26.0
+3   juli  williams  22.0
+>>> print(df.ndim)
+2
+>>> print(df.shape)
+(4, 3)
+>>> print(df.dtypes)
+FName     object
+LName     object
+Age      float64
+dtype: object
+
+import pandas as pd
+# 從CSV檔案中讀取資料
+data = pd.read_csv('data.csv')
+print(data)
+
+import pandas as pd
+# 從CSV檔案中讀取資料
+data = pd.read_excel('data.xlsx', sheet_name='Sheet1')
+print(data)
+
+import pandas as pd
+# 建立DataFrame
+data = {'Name':['Amy', 'Bob', 'Cathy', 'David'], 'Age':[25, 32, 18, 47], 'Country':['Taiwan', 'USA', 'Japan', 'China'], }
+print(data)
+df = pd.DataFrame(data)
+
+# 將DataFrame寫入CSV檔案
+df.to_csv('example.csv', index=False)https://tw.stock.yahoo.com/rank/change-up?exchange=TAI
+.to_csv('data.csv', mode='a', header=False if not existing_df.empty else True, index=False)
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 建立一個 DataFrame
+df = pd.DataFrame({'Year': [2015, 2016, 2017, 2018, 2019], 'Sales': [500, 600, 700, 800, 900]})
+
+# 繪製折線圖
+df.plot(x='Year', y='Sales', kind='line', title='Sales Trend')
+# 繪製傘點圖
+# df.plot.scatter(x='Year', y='Sales', title='Sales Trend')
+
+# 設定 X 軸刻度
+plt.xticks(df['Year'])  # 只顯示指定的年份
+
+# 設定 Y 軸刻度
+plt.yticks(df['Sales'])  # 只顯示指定的銷售數據
+
+# 儲存圖表為 PNG 檔案
+plt.savefig('sales_trend.png')  # 儲存在當前目錄，檔名為 sales_trend.png
+
+plt.show()
+
+[GET]
+import requests
+html=requests.get('https://tw.stock.yahoo.com/rank/change-up?exchange=TAI')
+html.text
+
+[POST]
+import requests
+html=requests.post('https://www.taifex.com.tw/cht/3/futDailyMarketReport', data={'queryDate': '2025/02/21'})
+html.text
+
+import requests
+from bs4 import BeautifulSoup
+
+# 設置標頭，模擬瀏覽器
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
+
+# 取得reponse
+req = requests.get('https://fubon-ebrokerdj.fbs.com.tw/z/zg/zg_A_0_5.djhtm', headers=headers)
+
+# 取得網頁原始碼文字
+html=req.text
+
+# 將網頁原始碼轉為Beautiful Soup
+soup=BeautifulSoup(html,'html.parser')
+
+# 取出所有的商品欄位
+product=[ i.text.strip() for i in soup.find_all('td',class_='t3t1')]
+
+# 顯示
+print(product)
+
+from selenium import webdriver
+
+driver = webdriver.Chrome()  # 需要下載 ChromeDriver
+driver.get('https://fubon-ebrokerdj.fbs.com.tw/z/zg/zg_A_0_5.djhtm')
+html = driver.page_source
+print(html)
+driver.quit()
+
+    """
+
+    # 檢查檔案是否存在並決定是否寫入表頭到第二個 CSV
+    csv_file = f'{output_dir}/{ticker}_#2_{start_short}_{end_short}.csv'
+    if os.path.exists(csv_file):
+        data.to_csv(csv_file, mode='w', header=True)
+    else:
+        data.to_csv(csv_file, mode='a', header=False)
+    """
+
+（）
+優先掌握「直接」的指標（如 KD），再逐步探索其他（如 MACD、RSI）。
+先從「直接」的指標入手（KD、RSI、MA），逐步擴展到抽象的（如布林通道、MACD），這很聰明！
+
+https://www.twse.com.tw/exchangeReport/MI_MARGN?response=json&date=20250304&selectType=ALL&_=1653293140736
+https://www.tdcc.com.tw/portal/zh/smWeb/qryStock
+https://www.twse.com.tw/zh/trading/foreign/t86.html
+
+https://www.twse.com.tw/exchangeReport/MI_INDEX?response=json&date=2025-03-25&type=ALL
