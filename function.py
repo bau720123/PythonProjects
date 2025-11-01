@@ -77,7 +77,7 @@ import time as time_module  # 用於計時功能
 from fugle_marketdata import WebSocketClient, RestClient
 
 # ChatGPT API 設定
-API_KEY = "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"  # 請替換成你的 API Key
+API_KEY = ""  # 請替換成你的 API Key
 API_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 
 def process_stock_data(ticker='2330', start_date='', end_date=''):
